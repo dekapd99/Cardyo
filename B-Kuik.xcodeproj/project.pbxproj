@@ -15,6 +15,7 @@
 		2AF4B3222A1AD31E0074FB90 /* B_Kuik_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B3212A1AD31E0074FB90 /* B_Kuik_Watch_AppTests.swift */; };
 		2AF4B32C2A1AD31E0074FB90 /* B_Kuik_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B32B2A1AD31E0074FB90 /* B_Kuik_Watch_AppUITests.swift */; };
 		2AF4B32E2A1AD31E0074FB90 /* B_Kuik_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B32D2A1AD31E0074FB90 /* B_Kuik_Watch_AppUITestsLaunchTests.swift */; };
+		2AF4B33F2A1AD4540074FB90 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4B33E2A1AD4540074FB90 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2AF4B3272A1AD31E0074FB90 /* B-Kuik Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "B-Kuik Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AF4B32B2A1AD31E0074FB90 /* B_Kuik_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B_Kuik_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		2AF4B32D2A1AD31E0074FB90 /* B_Kuik_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B_Kuik_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AF4B33E2A1AD4540074FB90 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				2AF4B3102A1AD31D0074FB90 /* B_KuikApp.swift */,
 				2AF4B3122A1AD31D0074FB90 /* ContentView.swift */,
+				2AF4B33E2A1AD4540074FB90 /* Extension.swift */,
 				2AF4B3142A1AD31E0074FB90 /* Assets.xcassets */,
 				2AF4B3162A1AD31E0074FB90 /* Preview Content */,
 			);
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF4B33F2A1AD4540074FB90 /* Extension.swift in Sources */,
 				2AF4B3132A1AD31D0074FB90 /* ContentView.swift in Sources */,
 				2AF4B3112A1AD31D0074FB90 /* B_KuikApp.swift in Sources */,
 			);
