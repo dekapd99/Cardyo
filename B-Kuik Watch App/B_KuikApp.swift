@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct B_Kuik_Watch_AppApp: App {
-    var body: some Scene {
+    //MARK: - PROPERTIES
+    @StateObject var workoutManager = WorkoutManager()
+    
+    //MARK: - FIRST SCREEN
+    @SceneBuilder var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
+            .environmentObject(workoutManager)
         }
     }
 }

@@ -10,20 +10,27 @@ import HealthKit
 
 struct ContentView: View {
     //MARK: - PROPERTIES
-    var workoutTypes: [HKWorkoutActivityType] = [.jumpRope, .running, .badminton, .soccer, .cycling]
+    @EnvironmentObject var workoutManager: WorkoutManager
+    
+    var workoutTypes: [HKWorkoutActivityType] = [.cycling, .jumpRope, .running, .badminton, .soccer]
     
     //MARK: - BODY
     var body: some View {
-        List(workoutTypes) { workoutTypes in
+        List(workoutTypes) { workoutType in
             NavigationLink(
-                workoutTypes.name,
-                destination: Text(workoutTypes.name)
+                workoutType.name,
+                destination: Text(workoutType.name),
+                tag: workoutType,
+                selection: $workoutManager.selectedWorkout
             ).padding(
                 EdgeInsets(top: 15, leading: 5, bottom: 15, trailing: 5)
             )
         }
         .listStyle(.carousel)
-        .navigationTitle("B-Kuik")
+        .navigationBarTitle("B-Kuik")
+        .onAppear {
+            workoutManager.requestAuthorization()
+        }
     }//: - BODY
 }
 
