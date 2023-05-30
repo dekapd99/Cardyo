@@ -11,7 +11,7 @@
 		2AC1B6212A1C67EE000FC2D8 /* BreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1B6202A1C67EE000FC2D8 /* BreathView.swift */; };
 		2ADF72CA2A1FC29D00D9B859 /* SummaryPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF72C92A1FC29D00D9B859 /* SummaryPagingView.swift */; };
 		2ADF72CE2A1FC45A00D9B859 /* EndWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF72CD2A1FC45A00D9B859 /* EndWorkoutView.swift */; };
-		E0CF93A22661A76300F7CED2 /* B-Kuik WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E0CF93A12661A76300F7CED2 /* B-Kuik WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E0CF93A22661A76300F7CED2 /* Cardyo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E0CF93A72661A76400F7CED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93A62661A76400F7CED2 /* Assets.xcassets */; };
 		E0CF93B52661A76500F7CED2 /* BKuikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF93B42661A76500F7CED2 /* BKuikApp.swift */; };
 		E0CF93B72661A76500F7CED2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF93B62661A76500F7CED2 /* ComplicationController.swift */; };
@@ -45,7 +45,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E0CF93A22661A76300F7CED2 /* B-Kuik WatchKit App.app in Embed Watch Content */,
+				E0CF93A22661A76300F7CED2 /* Cardyo WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,8 +57,8 @@
 		2AC1B6202A1C67EE000FC2D8 /* BreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathView.swift; sourceTree = "<group>"; };
 		2ADF72C92A1FC29D00D9B859 /* SummaryPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPagingView.swift; sourceTree = "<group>"; };
 		2ADF72CD2A1FC45A00D9B859 /* EndWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndWorkoutView.swift; sourceTree = "<group>"; };
-		E0CF939D2661A76300F7CED2 /* B-Kuik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "B-Kuik.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0CF93A12661A76300F7CED2 /* B-Kuik WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "B-Kuik WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0CF939D2661A76300F7CED2 /* Cardyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardyo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CF93A62661A76400F7CED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CF93A82661A76400F7CED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0CF93B42661A76500F7CED2 /* BKuikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKuikApp.swift; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		E0CF939E2661A76300F7CED2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E0CF939D2661A76300F7CED2 /* B-Kuik.app */,
-				E0CF93A12661A76300F7CED2 /* B-Kuik WatchKit App.app */,
+				E0CF939D2661A76300F7CED2 /* Cardyo.app */,
+				E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E0CF939C2661A76300F7CED2 /* B-Kuik */ = {
+		E0CF939C2661A76300F7CED2 /* Cardyo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0CF93C82661A76600F7CED2 /* Build configuration list for PBXNativeTarget "B-Kuik" */;
+			buildConfigurationList = E0CF93C82661A76600F7CED2 /* Build configuration list for PBXNativeTarget "Cardyo" */;
 			buildPhases = (
 				E0CF939B2661A76300F7CED2 /* Resources */,
 				E0CF93C72661A76600F7CED2 /* Embed Watch Content */,
@@ -190,14 +190,14 @@
 			dependencies = (
 				E0CF93A42661A76300F7CED2 /* PBXTargetDependency */,
 			);
-			name = "B-Kuik";
+			name = Cardyo;
 			productName = MyWorkouts;
-			productReference = E0CF939D2661A76300F7CED2 /* B-Kuik.app */;
+			productReference = E0CF939D2661A76300F7CED2 /* Cardyo.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
-		E0CF93A02661A76300F7CED2 /* B-Kuik WatchKit App */ = {
+		E0CF93A02661A76300F7CED2 /* Cardyo WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0CF93C42661A76600F7CED2 /* Build configuration list for PBXNativeTarget "B-Kuik WatchKit App" */;
+			buildConfigurationList = E0CF93C42661A76600F7CED2 /* Build configuration list for PBXNativeTarget "Cardyo WatchKit App" */;
 			buildPhases = (
 				E0CF939F2661A76300F7CED2 /* Resources */,
 				E0CF93A92661A76500F7CED2 /* Sources */,
@@ -207,9 +207,9 @@
 			);
 			dependencies = (
 			);
-			name = "B-Kuik WatchKit App";
+			name = "Cardyo WatchKit App";
 			productName = "MyWorkouts WatchKit App";
-			productReference = E0CF93A12661A76300F7CED2 /* B-Kuik WatchKit App.app */;
+			productReference = E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E0CF939A2661A76300F7CED2 /* Build configuration list for PBXProject "B-Kuik" */;
+			buildConfigurationList = E0CF939A2661A76300F7CED2 /* Build configuration list for PBXProject "Cardyo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -243,8 +243,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E0CF939C2661A76300F7CED2 /* B-Kuik */,
-				E0CF93A02661A76300F7CED2 /* B-Kuik WatchKit App */,
+				E0CF939C2661A76300F7CED2 /* Cardyo */,
+				E0CF93A02661A76300F7CED2 /* Cardyo WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +296,7 @@
 /* Begin PBXTargetDependency section */
 		E0CF93A42661A76300F7CED2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E0CF93A02661A76300F7CED2 /* B-Kuik WatchKit App */;
+			target = E0CF93A02661A76300F7CED2 /* Cardyo WatchKit App */;
 			targetProxy = E0CF93A32661A76300F7CED2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -501,7 +501,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E0CF939A2661A76300F7CED2 /* Build configuration list for PBXProject "B-Kuik" */ = {
+		E0CF939A2661A76300F7CED2 /* Build configuration list for PBXProject "Cardyo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E0CF93BE2661A76600F7CED2 /* Debug */,
@@ -510,7 +510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0CF93C42661A76600F7CED2 /* Build configuration list for PBXNativeTarget "B-Kuik WatchKit App" */ = {
+		E0CF93C42661A76600F7CED2 /* Build configuration list for PBXNativeTarget "Cardyo WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E0CF93C52661A76600F7CED2 /* Debug */,
@@ -519,7 +519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0CF93C82661A76600F7CED2 /* Build configuration list for PBXNativeTarget "B-Kuik" */ = {
+		E0CF93C82661A76600F7CED2 /* Build configuration list for PBXNativeTarget "Cardyo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E0CF93C92661A76600F7CED2 /* Debug */,
