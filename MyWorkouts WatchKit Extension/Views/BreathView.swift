@@ -26,7 +26,7 @@ struct BreathView: View {
     @State private var breatheIn = false
     @State private var breatheOut = true
     
-    @State private var timerSeconds = 10
+    @State private var timerSeconds = 60
     @State private var timer: Timer?
     @State private var navigateToSummary = false
     
