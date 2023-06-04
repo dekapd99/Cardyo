@@ -9,7 +9,7 @@
 import SwiftUI
 
 @main
-struct BKuikApp: App {
+struct CardyoApp: App {
     @StateObject private var workoutManager = WorkoutViewModel()
 
     @SceneBuilder var body: some Scene {

@@ -18,7 +18,7 @@
 		2AFDA4BF2A2C606B006C29D0 /* EnumTabViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFDA4BE2A2C606B006C29D0 /* EnumTabViewData.swift */; };
 		E0CF93A22661A76300F7CED2 /* Cardyo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E0CF93A72661A76400F7CED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93A62661A76400F7CED2 /* Assets.xcassets */; };
-		E0CF93B52661A76500F7CED2 /* BKuikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF93B42661A76500F7CED2 /* BKuikApp.swift */; };
+		E0CF93B52661A76500F7CED2 /* CardyoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF93B42661A76500F7CED2 /* CardyoApp.swift */; };
 		E0CF93B72661A76500F7CED2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF93B62661A76500F7CED2 /* ComplicationController.swift */; };
 		E0CF93B92661A76600F7CED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93B82661A76600F7CED2 /* Assets.xcassets */; };
 		E0CF93BC2661A76600F7CED2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93BB2661A76600F7CED2 /* Preview Assets.xcassets */; };
@@ -71,7 +71,7 @@
 		E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardyo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CF93A62661A76400F7CED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CF93A82661A76400F7CED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E0CF93B42661A76500F7CED2 /* BKuikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BKuikApp.swift; sourceTree = "<group>"; };
+		E0CF93B42661A76500F7CED2 /* CardyoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardyoApp.swift; sourceTree = "<group>"; };
 		E0CF93B62661A76500F7CED2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		E0CF93B82661A76600F7CED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CF93BB2661A76600F7CED2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 				E0DCA6212661B38900496154 /* View */,
 				E0DCA6222661B39200496154 /* ViewModel */,
 				E0DCA61D2661B27D00496154 /* MyWorkouts WatchKit Extension.entitlements */,
-				E0CF93B42661A76500F7CED2 /* BKuikApp.swift */,
+				E0CF93B42661A76500F7CED2 /* CardyoApp.swift */,
 				E0CF93B62661A76500F7CED2 /* ComplicationController.swift */,
 				E0CF93B82661A76600F7CED2 /* Assets.xcassets */,
 				E0CF93BD2661A76600F7CED2 /* Info.plist */,
@@ -309,7 +309,7 @@
 				2AC1B6212A1C67EE000FC2D8 /* BreathView.swift in Sources */,
 				E0DCA6302661B3CD00496154 /* ElapsedTimeView.swift in Sources */,
 				E0DCA62C2661B3CD00496154 /* ControlsView.swift in Sources */,
-				E0CF93B52661A76500F7CED2 /* BKuikApp.swift in Sources */,
+				E0CF93B52661A76500F7CED2 /* CardyoApp.swift in Sources */,
 				2A9159252A2C6565009634B1 /* ExtensionActivityType.swift in Sources */,
 				E0CF93B72661A76500F7CED2 /* ComplicationController.swift in Sources */,
 				2ADF72CA2A1FC29D00D9B859 /* SummaryPagingView.swift in Sources */,
