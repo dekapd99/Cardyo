@@ -5,7 +5,7 @@
 
 <h1 align="center">
   <br>
-    <a href="#" target="_blank"><img src="logo.png" width="400"></a>
+    <a href="#" target="_blank"><img src="logo.png" width="200"></a>
   <br>
   <p>Cardyo</p>
 </h1>
@@ -25,7 +25,7 @@ Cardyo is a sports WatchOS application that records and calculates cardiovascula
 
 ### Preview
 <p align="center">
-  <a href="#" target="_blank"><img src="preview.gif"></a>
+  <a href="#" target="_blank"><img src="preview.gif" width="400"></a>
 </p>
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
