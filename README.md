@@ -1,4 +1,8 @@
 <!-- ABOUT THE PROJECT -->
+<p align="center">
+  <a href="#" target="_blank"><img src="Banner.png"></a>
+</p>
+
 <h1 align="center">
   <br>
     <a href="#" target="_blank"><img src="logo.png" width="400"></a>
@@ -32,7 +36,7 @@ Here is the file and folder structure for
 
     .
     ├── Assets                              # Contains Colors, Logo & Images
-    ├── MyWorkouts WatchKit Extension       # Contains Niks Watch Apps
+    ├── MyWorkouts WatchKit Extension       # Contains Cardyo Watch Apps
     ├── CardyoApp                           # Contains Cardyo Root Project
     ├── ComplicationController              # Contains Complication View When Lock Screen Mode Activated
     ├── Helper                              # Contains EnumTabView Data and Extension Activity Type
@@ -113,5 +117,7 @@ DISCLAIMER: ASSETS ARE USED FOR EDUCATION PURPOSE ONLY, NOT FOR COMMERCIAL PURPO
 Assets Source: [SF Symbols 4 Icon](https://developer.apple.com/sf-symbols/)
 
 Figma Projects: [Cardyo Figma](https://www.figma.com/file/odx5dhDAoX1v7au5cjEaEv/Cardyo%3A-A-Native-WatchOS-Sports-App?type=design&node-id=0%3A1&t=VZXdMFKWXjKhfL9f-1)
+
+Medium Article: [Cardyo Medium](https://medium.com/@dekaprimatio/cardyo-a-native-watchos-sports-apps-️-️-c1848a0bbba5)
 
 <p align="right">(<a href="#about">back to top</a>)</p>
