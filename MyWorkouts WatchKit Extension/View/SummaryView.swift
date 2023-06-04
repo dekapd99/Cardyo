@@ -13,7 +13,7 @@ import WatchKit
 
 struct SummaryView: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: WorkoutViewModel
     @Environment(\.dismiss) var dismiss
     @State private var durationFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -24,15 +24,17 @@ struct SummaryView: View {
     
     //MARK: - BODY
     var body: some View {
+        
+        //MARK: - IF ELSE CONDITIONAL STATEMENT
         if workoutManager.workout == nil {
             ProgressView("Saving Workout")
                 .navigationBarHidden(true)
         } else {
-            //MARK: - SCROLLVIEW
+            //MARK: - SCROLLVIEW & VSTACK WRAPPER
             ScrollView {
                 VStack(spacing: 10) {
                     
-                    //MARK: - TOTAL TIME
+                    //MARK: - TOTAL TIME (HSTACK)
                     HStack {
                         Image(systemName: "clock")
                             .font(.system(size: 30))
@@ -43,10 +45,11 @@ struct SummaryView: View {
                             
                             Divider()
                             
-                            SummaryMetricView(value: durationFormatter.string(from: workoutManager.workout?.duration ?? 0.0) ?? "")
+                            //SUMMARY METRIC MODEL FOR WORKOUT TOTAL TIME
+                            SummaryMetricModel(value: durationFormatter.string(from: workoutManager.workout?.duration ?? 0.0) ?? "")
                                 .font(.system(size: 20, weight: .semibold))
                         }
-                    }//: - TOTAL TIME
+                    }//: - TOTAL TIME (HSTACK)
                     .padding(8)
                     .background(
                         LinearGradient(
@@ -57,7 +60,7 @@ struct SummaryView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                     )
                     
-                    //MARK: - TOTAL DISTANCE
+                    //MARK: - TOTAL DISTANCE (HSTACK)
                     HStack {
                         Image(systemName: "lines.measurement.horizontal")
                             .font(.system(size: 30))
@@ -68,11 +71,12 @@ struct SummaryView: View {
                             
                             Divider()
                             
-                            SummaryMetricView(value: Measurement(value: workoutManager.workout?.totalDistance?.doubleValue(for: .meter()) ?? 0,unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road, numberFormatStyle: .number.precision(.fractionLength(1)))))
+                            //SUMMARY METRIC MODEL FOR WORKOUT TOTAL DISTANCE
+                            SummaryMetricModel(value: Measurement(value: workoutManager.workout?.totalDistance?.doubleValue(for: .meter()) ?? 0,unit: UnitLength.meters).formatted(.measurement(width: .abbreviated, usage: .road, numberFormatStyle: .number.precision(.fractionLength(1)))))
                                 .font(.system(size: 20, weight: .semibold))
 
                         }
-                    }//: - TOTAL DISTANCE
+                    }//: - TOTAL DISTANCE (HSTACK)
                     .padding(8)
                     .background(
                         LinearGradient(
@@ -83,7 +87,7 @@ struct SummaryView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                     )
                     
-                    //MARK: - CALORIES BURNED
+                    //MARK: - CALORIES BURNED (HSTACK)
                     HStack {
                         Image(systemName: "flame")
                             .font(.system(size: 30))
@@ -94,11 +98,12 @@ struct SummaryView: View {
                             
                             Divider()
                             
-                            SummaryMetricView(value: Measurement(value: workoutManager.workout?.totalEnergyBurned?.doubleValue(for: .kilocalorie()) ?? 0,unit: UnitEnergy.kilocalories)
+                            //SUMMARY METRIC MODEL FOR WORKOUT CALORIES BURNED
+                            SummaryMetricModel(value: Measurement(value: workoutManager.workout?.totalEnergyBurned?.doubleValue(for: .kilocalorie()) ?? 0,unit: UnitEnergy.kilocalories)
                                 .formatted(.measurement(width: .abbreviated,usage: .workout, numberFormatStyle: .number.precision(.fractionLength(0)))))
                                 .font(.system(size: 20, weight: .semibold))
                         }
-                    }//: - CALORIES BURNED
+                    }//: - CALORIES BURNED (HSTACK)
                     .padding(8)
                     .background(
                         LinearGradient(
@@ -109,7 +114,7 @@ struct SummaryView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                     )
                     
-                    //MARK: - AVG. HEART RATE
+                    //MARK: - AVG. HEART RATE (HSTACK)
                     HStack {
                         Image(systemName: "heart")
                             .font(.system(size: 30))
@@ -120,10 +125,11 @@ struct SummaryView: View {
                             
                             Divider()
                             
-                            SummaryMetricView(value: workoutManager.averageHeartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
+                            //SUMMARY METRIC MODEL FOR WORKOUT AVG. HEART RATE
+                            SummaryMetricModel(value: workoutManager.averageHeartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
                                 .font(.system(size: 20, weight: .semibold))
                         }
-                    }//: - AVG. HEART RATE
+                    }//: - AVG. HEART RATE (HSTACK)
                     .padding(8)
                     .background(
                         LinearGradient(
@@ -133,19 +139,14 @@ struct SummaryView: View {
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                     )
-                }
+                }//: - VSTACK WRAPPER
+                
                 .scenePadding()
-            }
+            }//: - SCROLLVIEW
             .navigationTitle("Summary")
             .navigationBarTitleDisplayMode(.inline)
-        }
-    }
-}
-
-struct SummaryMetricView: View {
-    var value: String
-    
-    var body: some View {
-        Text(value)
-    }
+            
+        }//: IF ELSE CONDITIONAL STATEMENT
+        
+    }//: - BODY
 }

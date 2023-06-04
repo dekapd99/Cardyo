@@ -10,7 +10,7 @@ import SwiftUI
 
 @main
 struct BKuikApp: App {
-    @StateObject private var workoutManager = WorkoutManager()
+    @StateObject private var workoutManager = WorkoutViewModel()
 
     @SceneBuilder var body: some Scene {
         WindowGroup {

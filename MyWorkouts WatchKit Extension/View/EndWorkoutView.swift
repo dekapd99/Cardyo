@@ -13,20 +13,22 @@ import WatchKit
 
 struct EndWorkoutView: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var workoutManager: WorkoutManager
-    @Environment(\.dismiss) var dismiss
-    @State private var navigateToStartView = false
+    @EnvironmentObject var workoutManager: WorkoutViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     //MARK: - BODY
     var body: some View {
+        
+        //MARK: - MAIN WRAPPER (VSTACK)
         VStack(spacing: 10) {
-            Text("Do you want to try Other Exercise")
+            Text("Congratulation \nYou've Done It")
                 .multilineTextAlignment(.center)
             
-            Button("Done") {
-                dismiss()
+            Button("Back to Home") {
+                presentationMode.wrappedValue.dismiss()
             }
-        }
+        }//: - MAIN WRAPPER (VSTACK)
+        
     }//: - BODY
 }
 

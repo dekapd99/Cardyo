@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2A4A3D222A1F1D320079EA8E /* RingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A3D212A1F1D320079EA8E /* RingsView.swift */; };
+		2A9159232A2C63FB009634B1 /* SummaryMetricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9159222A2C63FB009634B1 /* SummaryMetricModel.swift */; };
+		2A9159252A2C6565009634B1 /* ExtensionActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9159242A2C6565009634B1 /* ExtensionActivityType.swift */; };
+		2A9159272A2C6EB5009634B1 /* TimeFormatterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9159262A2C6EB5009634B1 /* TimeFormatterViewModel.swift */; };
+		2A9159292A2C6F0F009634B1 /* MetricViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9159282A2C6F0F009634B1 /* MetricViewModel.swift */; };
 		2AC1B6212A1C67EE000FC2D8 /* BreathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1B6202A1C67EE000FC2D8 /* BreathView.swift */; };
 		2ADF72CA2A1FC29D00D9B859 /* SummaryPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF72C92A1FC29D00D9B859 /* SummaryPagingView.swift */; };
 		2ADF72CE2A1FC45A00D9B859 /* EndWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADF72CD2A1FC45A00D9B859 /* EndWorkoutView.swift */; };
+		2AFDA4BF2A2C606B006C29D0 /* EnumTabViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFDA4BE2A2C606B006C29D0 /* EnumTabViewData.swift */; };
 		E0CF93A22661A76300F7CED2 /* Cardyo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E0CF93A72661A76400F7CED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93A62661A76400F7CED2 /* Assets.xcassets */; };
 		E0CF93B52661A76500F7CED2 /* BKuikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CF93B42661A76500F7CED2 /* BKuikApp.swift */; };
@@ -18,7 +23,7 @@
 		E0CF93B92661A76600F7CED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93B82661A76600F7CED2 /* Assets.xcassets */; };
 		E0CF93BC2661A76600F7CED2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CF93BB2661A76600F7CED2 /* Preview Assets.xcassets */; };
 		E0DCA6202661B27D00496154 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DCA61F2661B27D00496154 /* HealthKit.framework */; };
-		E0DCA6242661B3A800496154 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCA6232661B3A800496154 /* WorkoutManager.swift */; };
+		E0DCA6242661B3A800496154 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCA6232661B3A800496154 /* WorkoutViewModel.swift */; };
 		E0DCA62C2661B3CD00496154 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCA6252661B3CD00496154 /* ControlsView.swift */; };
 		E0DCA62D2661B3CD00496154 /* ActivityRingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCA6262661B3CD00496154 /* ActivityRingsView.swift */; };
 		E0DCA62E2661B3CD00496154 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DCA6272661B3CD00496154 /* SummaryView.swift */; };
@@ -54,9 +59,14 @@
 
 /* Begin PBXFileReference section */
 		2A4A3D212A1F1D320079EA8E /* RingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsView.swift; sourceTree = "<group>"; };
+		2A9159222A2C63FB009634B1 /* SummaryMetricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryMetricModel.swift; sourceTree = "<group>"; };
+		2A9159242A2C6565009634B1 /* ExtensionActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionActivityType.swift; sourceTree = "<group>"; };
+		2A9159262A2C6EB5009634B1 /* TimeFormatterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatterViewModel.swift; sourceTree = "<group>"; };
+		2A9159282A2C6F0F009634B1 /* MetricViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricViewModel.swift; sourceTree = "<group>"; };
 		2AC1B6202A1C67EE000FC2D8 /* BreathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathView.swift; sourceTree = "<group>"; };
 		2ADF72C92A1FC29D00D9B859 /* SummaryPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPagingView.swift; sourceTree = "<group>"; };
 		2ADF72CD2A1FC45A00D9B859 /* EndWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndWorkoutView.swift; sourceTree = "<group>"; };
+		2AFDA4BE2A2C606B006C29D0 /* EnumTabViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTabViewData.swift; sourceTree = "<group>"; };
 		E0CF939D2661A76300F7CED2 /* Cardyo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardyo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CF93A12661A76300F7CED2 /* Cardyo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cardyo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CF93A62661A76400F7CED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +78,7 @@
 		E0CF93BD2661A76600F7CED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0DCA61D2661B27D00496154 /* MyWorkouts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyWorkouts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		E0DCA61F2661B27D00496154 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		E0DCA6232661B3A800496154 /* WorkoutManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		E0DCA6232661B3A800496154 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
 		E0DCA6252661B3CD00496154 /* ControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		E0DCA6262661B3CD00496154 /* ActivityRingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityRingsView.swift; sourceTree = "<group>"; };
 		E0DCA6272661B3CD00496154 /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
@@ -90,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AFDA4BC2A2C5AEB006C29D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A9159222A2C63FB009634B1 /* SummaryMetricModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AFDA4BD2A2C6049006C29D0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2AFDA4BE2A2C606B006C29D0 /* EnumTabViewData.swift */,
+				2A9159242A2C6565009634B1 /* ExtensionActivityType.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		E0CF93962661A76200F7CED2 = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +148,10 @@
 		E0CF93B12661A76500F7CED2 /* MyWorkouts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E0DCA6222661B39200496154 /* Controller */,
-				E0DCA6212661B38900496154 /* Views */,
+				2AFDA4BD2A2C6049006C29D0 /* Helper */,
+				2AFDA4BC2A2C5AEB006C29D0 /* Model */,
+				E0DCA6212661B38900496154 /* View */,
+				E0DCA6222661B39200496154 /* ViewModel */,
 				E0DCA61D2661B27D00496154 /* MyWorkouts WatchKit Extension.entitlements */,
 				E0CF93B42661A76500F7CED2 /* BKuikApp.swift */,
 				E0CF93B62661A76500F7CED2 /* ComplicationController.swift */,
@@ -149,7 +178,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E0DCA6212661B38900496154 /* Views */ = {
+		E0DCA6212661B38900496154 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				E0DCA6262661B3CD00496154 /* ActivityRingsView.swift */,
@@ -164,15 +193,17 @@
 				2ADF72C92A1FC29D00D9B859 /* SummaryPagingView.swift */,
 				2ADF72CD2A1FC45A00D9B859 /* EndWorkoutView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		E0DCA6222661B39200496154 /* Controller */ = {
+		E0DCA6222661B39200496154 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E0DCA6232661B3A800496154 /* WorkoutManager.swift */,
+				E0DCA6232661B3A800496154 /* WorkoutViewModel.swift */,
+				2A9159262A2C6EB5009634B1 /* TimeFormatterViewModel.swift */,
+				2A9159282A2C6F0F009634B1 /* MetricViewModel.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,14 +305,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A9159292A2C6F0F009634B1 /* MetricViewModel.swift in Sources */,
 				2AC1B6212A1C67EE000FC2D8 /* BreathView.swift in Sources */,
 				E0DCA6302661B3CD00496154 /* ElapsedTimeView.swift in Sources */,
 				E0DCA62C2661B3CD00496154 /* ControlsView.swift in Sources */,
 				E0CF93B52661A76500F7CED2 /* BKuikApp.swift in Sources */,
+				2A9159252A2C6565009634B1 /* ExtensionActivityType.swift in Sources */,
 				E0CF93B72661A76500F7CED2 /* ComplicationController.swift in Sources */,
 				2ADF72CA2A1FC29D00D9B859 /* SummaryPagingView.swift in Sources */,
+				2A9159272A2C6EB5009634B1 /* TimeFormatterViewModel.swift in Sources */,
+				2A9159232A2C63FB009634B1 /* SummaryMetricModel.swift in Sources */,
 				E0DCA62D2661B3CD00496154 /* ActivityRingsView.swift in Sources */,
-				E0DCA6242661B3A800496154 /* WorkoutManager.swift in Sources */,
+				E0DCA6242661B3A800496154 /* WorkoutViewModel.swift in Sources */,
+				2AFDA4BF2A2C606B006C29D0 /* EnumTabViewData.swift in Sources */,
 				E0DCA6322661B3CD00496154 /* MetricsView.swift in Sources */,
 				E0DCA62E2661B3CD00496154 /* SummaryView.swift in Sources */,
 				2ADF72CE2A1FC45A00D9B859 /* EndWorkoutView.swift in Sources */,

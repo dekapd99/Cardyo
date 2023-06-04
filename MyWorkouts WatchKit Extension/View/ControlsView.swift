@@ -10,8 +10,7 @@ import SwiftUI
 
 struct ControlsView: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var workoutManager: WorkoutManager
-    let hapticImpact = WKHapticType.click
+    @EnvironmentObject var workoutViewModel: WorkoutViewModel
     
     //MARK: - BODY
     var body: some View {
@@ -19,14 +18,15 @@ struct ControlsView: View {
         //MARK: - MAIN WRAPPER (VSTACK)
         VStack(spacing: 30) {
             
-            //MARK: - PAUSE & RESUME BUTTON
+            //MARK: - PAUSE & RESUME BUTTON (VSTACK)
             VStack {
+                
                 HStack {
                     Button {
-                        workoutManager.togglePause()
+                        workoutViewModel.togglePause()
                         WKInterfaceDevice.current().play(.notification)
                     } label: {
-                        Text(workoutManager.running ? "Pause" : "Resume")
+                        Text(workoutViewModel.running ? "Pause" : "Resume")
                             .padding(.horizontal, 10)
                             .background(
                                 RoundedRectangle(cornerRadius: 20)
@@ -36,7 +36,7 @@ struct ControlsView: View {
                         
                         Spacer()
                         
-                        Image(systemName: workoutManager.running ? "pause" : "play")
+                        Image(systemName: workoutViewModel.running ? "pause" : "play")
                             .padding(.horizontal, 10)
                             .background(
                                 Circle()
@@ -44,14 +44,15 @@ struct ControlsView: View {
                                     .frame(width: 30, height: 30)
                             )
                     }//: - LABEL BUTTON
-                }
+                }// - HSTACK WRAPPER (PAUSE & PLAY)
+                
             }//: - PAUSE & PLAY (VSTACK)
             
-            //MARK: - STOP BUTTON
+            //MARK: - STOP BUTTON (VSTACK)
             VStack {
                 HStack {
                     Button {
-                        workoutManager.endWorkout()
+                        workoutViewModel.endWorkout()
                         WKInterfaceDevice.current().play(.notification)
                     } label: {
                         Text("Stop")
@@ -70,8 +71,8 @@ struct ControlsView: View {
                                     .fill(Color("ColorAppleDark"))
                                     .frame(height: 30)
                             )
-                    }
-                }
+                    }//: - LABEL BUTTON
+                }// - HSTACK WRAPPER (STOP & XMARK)
             }//: - STOP BUTTON (VSTACK)
             
         }//: - MAIN WRAPPER (VSTACK)
@@ -81,6 +82,6 @@ struct ControlsView: View {
 //MARK: - PREVIEW
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
-        ControlsView().environmentObject(WorkoutManager())
+        ControlsView().environmentObject(WorkoutViewModel())
     }
 }

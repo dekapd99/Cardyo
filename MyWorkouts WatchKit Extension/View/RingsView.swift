@@ -10,10 +10,12 @@ import SwiftUI
 
 struct RingsView: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: WorkoutViewModel
     
     //MARK: - BODY
     var body: some View {
+        
+        //MARK: - MAIN WRAPPER (VSTACK)
         VStack {
             Text("Activity Rings")
                 .fontWeight(.semibold)
@@ -31,16 +33,18 @@ struct RingsView: View {
             Divider()
                 .padding(.vertical)
             
+            //MARK: - ACTIVITY RINGS RESULTS
             ActivityRingsView(healthStore: workoutManager.healthStore)
                 .frame(width: 120, height: 120)
         }
         .padding(.top, 35)
     }//: - BODY
+    
 }
 
 //MARK: - PREVIEW
 struct RingsView_Previews: PreviewProvider {
     static var previews: some View {
-        RingsView().environmentObject(WorkoutManager())
+        RingsView().environmentObject(WorkoutViewModel())
     }
 }

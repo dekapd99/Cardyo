@@ -1,14 +1,15 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The workout manager that interfaces with HealthKit.
-*/
+//
+//  WorkoutViewModel.swift
+//  Cardyo WatchKit App
+//
+//  Created by Deka Primatio on 04/06/23.
+//  Copyright © 2023 Apple. All rights reserved.
+//
 
 import Foundation
 import HealthKit
 
-class WorkoutManager: NSObject, ObservableObject {
+class WorkoutViewModel: NSObject, ObservableObject {
     var selectedWorkout: HKWorkoutActivityType? {
         didSet {
             guard let selectedWorkout = selectedWorkout else { return }
@@ -24,17 +25,18 @@ class WorkoutManager: NSObject, ObservableObject {
         }
     }
 
+    //Storing Variable for Health Metric, Session, and Workout
     let healthStore = HKHealthStore()
     var session: HKWorkoutSession?
     var builder: HKLiveWorkoutBuilder?
 
-    // Start the workout.
+    //Start the workout.
     func startWorkout(workoutType: HKWorkoutActivityType) {
         let configuration = HKWorkoutConfiguration()
         configuration.activityType = workoutType
         configuration.locationType = .outdoor
 
-        // Create the session and obtain the workout builder.
+        //Create the session and obtain the workout builder.
         do {
             session = try HKWorkoutSession(healthStore: healthStore, configuration: configuration)
             builder = session?.associatedWorkoutBuilder()
@@ -43,15 +45,15 @@ class WorkoutManager: NSObject, ObservableObject {
             return
         }
 
-        // Setup session and builder.
+        //Setup session and builder.
         session?.delegate = self
         builder?.delegate = self
 
-        // Set the workout builder's data source.
+        //Set the workout builder's data source.
         builder?.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore,
                                                      workoutConfiguration: configuration)
 
-        // Start the workout session and begin data collection.
+        //Start the workout session and begin data collection.
         let startDate = Date()
         session?.startActivity(with: startDate)
         builder?.beginCollection(withStart: startDate) { (success, error) in
@@ -59,14 +61,14 @@ class WorkoutManager: NSObject, ObservableObject {
         }
     }
 
-    // Request authorization to access HealthKit.
+    //Request authorization to access HealthKit.
     func requestAuthorization() {
-        // The quantity type to write to the health store.
+        //The quantity type to write to the health store.
         let typesToShare: Set = [
             HKQuantityType.workoutType()
         ]
 
-        // The quantity types to read from the health store.
+        //The quantity types to read from the health store.
         let typesToRead: Set = [
             HKQuantityType.quantityType(forIdentifier: .heartRate)!,
             HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
@@ -75,15 +77,15 @@ class WorkoutManager: NSObject, ObservableObject {
             HKObjectType.activitySummaryType()
         ]
 
-        // Request authorization for those quantity types.
+        //Request authorization for those quantity types.
         healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (success, error) in
-            // Handle error.
+            //Handle error.
         }
     }
 
-    // MARK: - Session State Control
+    //MARK: - Session State Control
 
-    // The app's workout state.
+    //The app's workout state.
     @Published var running = false
 
     func togglePause() {
@@ -107,7 +109,7 @@ class WorkoutManager: NSObject, ObservableObject {
         showingSummaryView = true
     }
 
-    // MARK: - Workout Metrics
+    //MARK: - Workout Metrics
     @Published var averageHeartRate: Double = 0
     @Published var heartRate: Double = 0
     @Published var activeEnergy: Double = 0
@@ -147,8 +149,8 @@ class WorkoutManager: NSObject, ObservableObject {
     }
 }
 
-// MARK: - HKWorkoutSessionDelegate
-extension WorkoutManager: HKWorkoutSessionDelegate {
+//MARK: - HKWorkoutSessionDelegate
+extension WorkoutViewModel: HKWorkoutSessionDelegate {
     func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState,
                         from fromState: HKWorkoutSessionState, date: Date) {
         DispatchQueue.main.async {
@@ -172,8 +174,8 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
     }
 }
 
-// MARK: - HKLiveWorkoutBuilderDelegate
-extension WorkoutManager: HKLiveWorkoutBuilderDelegate {
+//MARK: - HKLiveWorkoutBuilderDelegate
+extension WorkoutViewModel: HKLiveWorkoutBuilderDelegate {
     func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
 
     }

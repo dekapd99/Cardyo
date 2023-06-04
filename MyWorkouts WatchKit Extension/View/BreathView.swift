@@ -11,9 +11,10 @@ import WatchKit
 
 struct BreathView: View {
     //MARK: - PROPERTIES
-    @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var workoutManager: WorkoutViewModel
     @Environment(\.dismiss) var dismiss
     
+    //ANIMATION PROPERTIES
     @State private var grow = false
     @State private var rotateFarRight = false
     @State private var rotateFarLeft = false
@@ -26,21 +27,25 @@ struct BreathView: View {
     @State private var breatheIn = false
     @State private var breatheOut = true
     
+    //COUNTDOWN TIMER PROPERTIES
     @State private var timerSeconds = 60
     @State private var timer: Timer?
     @State private var navigateToSummary = false
     
     //MARK: - BODY
     var body: some View {
+        
+        //MARK: - MAIN WRAPPER (VSTACK)
         VStack {
             
             Spacer()
             
             Spacer()
             
+            //MARK: - PETAL & DOT CIRCLE ANIMATION (ZSTACK)
             ZStack {
-                
-                Image("Petal") // Middle
+                //MARK: - MIDDLE PETAL
+                Image("Petal")
                     .scaleEffect(grow ? 0.6 : 0.5, anchor: .bottom)
                     .onAppear {
                         withAnimation(Animation.easeInOut(duration: 2).delay(2).repeatForever(autoreverses: true)) {
@@ -48,8 +53,8 @@ struct BreathView: View {
                         }
                     }
                 
-                
-                Image("Petal")  // Middle left
+                //MARK: - MIDDLE LEFT PETAL
+                Image("Petal")
                     .scaleEffect(grow ? 0.6 : 0.5, anchor: .bottom)
                     .rotationEffect(.degrees( rotateMiddleLeft ? -25 : -5), anchor: .bottom)
                     .onAppear {
@@ -58,8 +63,8 @@ struct BreathView: View {
                         }
                     }
                 
-                
-                Image("Petal")  // Middle right
+                //MARK: - MIDDLE RIGHT
+                Image("Petal")
                     .scaleEffect(grow ? 0.6 : 0.5, anchor: .bottom)
                     .rotationEffect(.degrees( rotateMiddleRight ? 25 : 5), anchor: .bottom)
                     .onAppear {
@@ -68,7 +73,8 @@ struct BreathView: View {
                         }
                     }
                 
-                Image("Petal")  // Left
+                //MARK: - FAR LEFT PETAL
+                Image("Petal")
                     .scaleEffect(grow ? 0.6 : 0.5, anchor: .bottom)
                     .rotationEffect(.degrees( rotateFarLeft ? -50 : -10), anchor: .bottom)
                     .onAppear {
@@ -77,7 +83,8 @@ struct BreathView: View {
                         }
                     }
                 
-                Image("Petal")  // Right
+                //MARK: - FAR RIGHT PETAL
+                Image("Petal")
                     .scaleEffect(grow ? 0.6 : 0.5, anchor: .bottom)
                     .rotationEffect(.degrees( rotateFarRight ? 50 : 10), anchor: .bottom)
                     .onAppear {
@@ -86,7 +93,8 @@ struct BreathView: View {
                         }
                     }
                 
-                Circle()  // Quarter dotted circle left
+                //MARK: - LEFT QUARTER DOT CIRCLE
+                Circle()
                     .trim(from: showLeftStroke ? 0 : 1/4, to: 1/4)
                     .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round, dash: [2, 16]))
                     .frame(width: 150, height: 65, alignment: .center)
@@ -99,7 +107,8 @@ struct BreathView: View {
                         }
                     }
                 
-                Circle()  // Quarter dotted circle right
+                //MARK: - RIGHT QUARTER DOT CIRCLE
+                Circle()
                     .trim(from: 0, to: showRightStroke ? 1/3.5 : 0)
                     .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round, dash: [2, 15]))
                     .frame(width: 150, height: 65, alignment: .center)
@@ -111,8 +120,7 @@ struct BreathView: View {
                             showRightStroke.toggle()
                         }
                     }
-                
-            } // Container for Petal
+            }//: - PETAL & DOT CIRCLE ANIMATION (ZSTACK)
             .shadow(radius: showShadow ? 20 : 0) // Switching from flat to elevation
             .hueRotation(Angle(degrees: changeColor ? -45 : 45)) // Animating Chroma
             .onAppear {
@@ -122,6 +130,7 @@ struct BreathView: View {
                 }
             }
             
+            //MARK: - TEXT BREATHE ANIMATION (ZSTACK)
             ZStack {
                 Text("Breathe In")
                     .opacity(breatheIn ? 0 : 1)
@@ -146,6 +155,7 @@ struct BreathView: View {
             
             Spacer()
             
+            //MARK: - COUNTDOWN TIMER ANIMATION
             Text("\(timerSeconds)")
                 .font(.system(size: 16, weight: .semibold))
                 .background(
@@ -154,17 +164,18 @@ struct BreathView: View {
                         .frame(width: 30, height: 30)
                 )
                 .padding(.top, 10)
-        } // VStack (Main Wrapper)
+        }//: - MAIN WRAPPER (VSTACK)
         .onAppear {
             startTimer()
         }
         .fullScreenCover(isPresented: $navigateToSummary) {
             SummaryPagingView()
                 .navigationBarBackButtonHidden(true)
-        }
+        }//FullScreenCover to Navigate to SummaryPagingView()
         
     }//: - BODY
     
+    //MARK: - START TIMER (PRIVATE FUNCTION)
     private func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             if timerSeconds > 0 {
@@ -174,11 +185,13 @@ struct BreathView: View {
                 navigateToSummary = true
             }
         }
-    }
+    }//: - START TIMER (PRIVATE FUNCTION)
     
+    //MARK: - STOP TIMER (PRIVATE FUNCTION)
     private func stopTimer() {
         timer?.invalidate()
-    }
+    }//: - STOP TIMER (PRIVATE FUNCTION)
+    
 }
 
 //MARK: - PREVIEW
