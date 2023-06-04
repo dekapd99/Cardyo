@@ -10,18 +10,18 @@ import SwiftUI
 
 @main
 struct CardyoApp: App {
-    @StateObject private var workoutManager = WorkoutViewModel()
+    @StateObject private var workoutViewModel = WorkoutViewModel()
 
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
                 StartView()
             }
-            .fullScreenCover(isPresented: $workoutManager.showingSummaryView) {
+            .fullScreenCover(isPresented: $workoutViewModel.showingSummaryView) {
                 BreathView()
                     .navigationBarBackButtonHidden(true)
             }
-            .environmentObject(workoutManager)
+            .environmentObject(workoutViewModel)
         }
     }
 }
