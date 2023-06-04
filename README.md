@@ -30,9 +30,7 @@ Cardyo is a sports WatchOS application that records and calculates cardiovascula
 
 <!-- ABOUT THE FILE & FOLDER STRUCTURE -->
 ## Folder & File Structure
-Here is the file and folder structure for 
-
-:
+Here is the file and folder structure for Cardyo:
 
     .
     ├── Assets                              # Contains Colors, Logo & Images
